@@ -16,12 +16,5 @@ public class Spawner : MonoBehaviour
         Instantiate(enemy, spawner.position, spawner.rotation);
 
     }
-    void Update()
-    {
-
-        if (Input.GetMouseButton(0))
-        {
-            DestroyObject(enemy);
-        }
-    }
+   
 }
