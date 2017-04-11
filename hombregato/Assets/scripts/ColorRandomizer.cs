@@ -6,6 +6,7 @@ public class ColorRandomizer : MonoBehaviour{
     private Renderer render;
     [SerializeField]
     private Color[] color;
+    int chosenColor;
 
     public void PutColor(int chosenColor)
     {
