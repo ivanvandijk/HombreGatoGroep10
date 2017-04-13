@@ -13,6 +13,7 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] private float delaycounter = 0.0f;
 	[SerializeField] private float reloadDelay = 1f;
 	[SerializeField] private float nextFireTime;
+   
 
 	void Start()
 	{
