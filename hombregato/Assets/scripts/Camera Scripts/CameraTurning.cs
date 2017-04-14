@@ -2,37 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraTurning : MonoBehaviour {
+public class CameraTurning : MonoBehaviour
+{
 
-    private int _boundary = 50;
-    private float _speed = 1.5f;
-
-    private int _theScreenWidth;
-    private int _theScreenHeight;
-
+    [SerializeField]
+    private float _turnSpeed;
     private Camera _camera;
 
-    void Start()
+    private void Start()
     {
         _camera = GetComponent<Camera>();
     }
 
-    void Update() {
-        if (Input.mousePosition.x > _theScreenWidth - _boundary)
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
         {
-            _camera.transform.Rotate(Vector3.right, Time.deltaTime * _speed);
-        }
-        if (Input.mousePosition.x < 0 + _boundary)
-        {
-            _camera.transform.Rotate(Vector3.left, Time.deltaTime * _speed);
-        }
-        if (Input.mousePosition.y > _theScreenHeight - _boundary)
-        {
-            _camera.transform.Rotate(Vector3.down, Time.deltaTime * _speed);
-        }
-        if (Input.mousePosition.y < 0 + _boundary)
-        {
-            _camera.transform.Rotate(Vector3.up, Time.deltaTime * _speed);
+            float h = _turnSpeed * Input.GetAxis("Mouse X");
+            _camera.transform.Rotate(0, -h, 0);
+
+            float q = _turnSpeed * Input.GetAxis("Mouse Y");
+            _camera.transform.Rotate(-q, 0, 0);
         }
     }
 }
