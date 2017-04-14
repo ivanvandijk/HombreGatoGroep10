@@ -25,7 +25,7 @@ public class ParadeKar : MonoBehaviour {
     void Start()
     {
      
-        Path path = GameObject.Find("Path").GetComponent<Path>();
+        Pathing path = GameObject.Find("Path").GetComponent<Pathing>();
         _wayPoints = path.GetWayPoints();
         currentWayPointIndex = 0;
         reachedEndOfPath = false;
