@@ -1,23 +1,22 @@
 fileFormatVersion: 2
-guid: 3f86976cae2acfc45aedd9f81edc1649
-timeCreated: 1492172460
+guid: 84e7c375c910139429ae91d76ce7aa06
+timeCreated: 1492162848
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder1
-    100004: pSphere1
+    100002: Hamm4er2
+    100004: pCube1
     400000: //RootNode
-    400002: pCylinder1
-    400004: pSphere1
-    2300000: pCylinder1
-    2300002: pSphere1
-    3300000: pCylinder1
-    3300002: pSphere1
-    4300000: pCylinder1
-    4300002: pSphere1
-    9500000: //RootNode
+    400002: Hamm4er2
+    400004: pCube1
+    2300000: Hamm4er2
+    2300002: pCube1
+    3300000: Hamm4er2
+    3300002: pCube1
+    4300000: Hamm4er2
+    4300002: pCube1
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

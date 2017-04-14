@@ -24,6 +24,7 @@ public class ParadeKar : MonoBehaviour {
 
     void Start()
     {
+     
         Path path = GameObject.Find("Path").GetComponent<Path>();
         _wayPoints = path.GetWayPoints();
         currentWayPointIndex = 0;
@@ -36,7 +37,7 @@ public class ParadeKar : MonoBehaviour {
         Debug.Log(reachedEndOfPath);
         if (!reachedEndOfPath)
         {
-            movementSpeed = 2;
+            movementSpeed = 100;
             float distance = Vector3.Distance(transform.position, _wayPoints[currentWayPointIndex].position);
             Debug.Log(currentWayPointIndex);
             if (distance <= _actionRadius)
@@ -73,5 +74,6 @@ public class ParadeKar : MonoBehaviour {
     void RotateToTarget()
     {
         transform.LookAt(_wayPoints[currentWayPointIndex].position);
+
     }
 }

@@ -18,7 +18,7 @@ public class BaloonMovement : MonoBehaviour
 
 
 
-        if (transform.position.y >= 60)     //hier destroy je de balon op possition 60
+        if (transform.position.y >= 450)     //hier destroy je de balon op possition 60
         {
 
             DestroyObject(gameObject);
