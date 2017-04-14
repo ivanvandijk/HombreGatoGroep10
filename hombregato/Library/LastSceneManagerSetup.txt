@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Jelmer.unity
+- path: Assets/scenes/Ivan.unity
   isLoaded: 1
   isActive: 1
