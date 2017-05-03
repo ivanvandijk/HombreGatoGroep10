@@ -9,7 +9,7 @@ public class ParadeKar : MonoBehaviour {
     private float movementSpeed;
 
     [SerializeField]
-    [Range(0.2f, 2)]
+    [Range(0.2f, 50f)]
     private float _actionRadius;
 
     private float wayPointActionRadius;
@@ -34,12 +34,14 @@ public class ParadeKar : MonoBehaviour {
 
     void Update()
     {
+       
         Debug.Log(reachedEndOfPath);
         if (!reachedEndOfPath)
         {
-            movementSpeed = 100;
+            movementSpeed = 50;
             float distance = Vector3.Distance(transform.position, _wayPoints[currentWayPointIndex].position);
             Debug.Log(currentWayPointIndex);
+            Debug.Log(distance);
             if (distance <= _actionRadius)
             {
                 if (currentWayPointIndex < _wayPoints.Length - 1)
@@ -68,12 +70,15 @@ public class ParadeKar : MonoBehaviour {
     {
         Vector3 Direction = transform.forward;
         Vector3 velocity = Direction * movementSpeed * Time.fixedDeltaTime;
+        velocity = Quaternion.Euler(0f, -90f, 0f) * velocity;
         rb.MovePosition(rb.position + velocity);
     }
 
     void RotateToTarget()
     {
+       
         transform.LookAt(_wayPoints[currentWayPointIndex].position);
-
+        transform.Rotate(0, 90f, 0);
     }
+
 }

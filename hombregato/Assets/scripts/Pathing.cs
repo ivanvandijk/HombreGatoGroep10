@@ -5,7 +5,6 @@ using UnityEngine;
 public class Pathing : MonoBehaviour {
 
     [SerializeField] private bool DrawGizmos;
-
     [SerializeField] private Transform[] _Waypoints;
 
     public Transform[] GetWayPoints()
@@ -17,7 +16,7 @@ public class Pathing : MonoBehaviour {
     {
         if (DrawGizmos)
         {
-            Gizmos.color = Color.cyan;
+            Gizmos.color = Color.red;
             for(int i = 1; i < _Waypoints.Length; i++)
             {
                 Gizmos.DrawLine(_Waypoints[i].position,
