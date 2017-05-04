@@ -38,7 +38,7 @@ public class ParadeKar : MonoBehaviour {
         Debug.Log(reachedEndOfPath);
         if (!reachedEndOfPath)
         {
-            movementSpeed = 50;
+            movementSpeed = 0;
             float distance = Vector3.Distance(transform.position, _wayPoints[currentWayPointIndex].position);
             Debug.Log(currentWayPointIndex);
             Debug.Log(distance);
